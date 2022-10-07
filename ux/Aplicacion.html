@@ -1,0 +1,102 @@
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<head>
+<meta charset="utf-8"/>         
+
+<!-- ---------------------------------------------------- -->
+<script src="logicaFake/llamar.js"></script>
+<script src="logicaFake/insertarCliente.js"></script>
+<script src="logicaFake/buscarPersonaConCorreo.js"></script>
+<script src="logicaFake/insertarMedicion.js"></script>
+<script src="logicaFake/BuscarProductoConReferencia.js"></script>
+
+
+<!-- ---------------------------------------------------- -->
+<script>
+function llamarAPruebaPulsado() {
+
+// llamo a la función de la lógica (versión fake)
+prueba( function( err, res ) {
+  if ( err ) {
+   alert( "hubo un problema llamando a prueba" )
+   return
+  }
+
+  alert( "prueba() ha respondido: " + res )
+
+  document.getElementById("salida").innerHTML = res
+})
+
+}
+</script>
+
+<!-- ---------------------------------------------------- -->
+
+<!-- ---------------------------------------------------- -->
+
+
+
+<script>
+  function insertarMedicionPulsado() {
+  
+  var id = document.getElementById("id").value
+  var valor = document.getElementById("valor").value
+  var fecha = document.getElementById("fecha").value  
+
+
+  // llamo a la función de la lógica (versión fake)
+  insertarMedicion( {id:  id, valor:  valor, fecha:  fecha}, function( err, res ) {
+    // cuando tenga el resultado lo muestro
+   if ( err ) {
+     alert( " hubo un error de transmisión http: " + err )
+     return
+   } else if ( res.error ) {
+     alert( " hubo un error en la llamada: " + JSON.stringify( res.error ) )
+     return
+   }
+    document.getElementById("salida1").innerHTML = " resultado= " + res;
+  })
+  
+  }
+  </script>
+
+</head>
+
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<body>
+
+<h1>Aplicaciónnnnn</h1>
+<h2> LA PTA MEDICION</h2>
+<form>
+  id:*<br>
+  <input id="id" type="text" name="id" value="xxxx">
+  <br>
+  medicion:<br>
+  <input id="valor" type="text" name="valor" value="aaaa">
+  <br>
+  fecha:<br>
+  <input id="fecha" type="text" name="fecha" value="bbbb">
+  <br>
+  <br> 
+</form> 
+
+<p>
+
+<button type="buton" onclick="insertarMedicionPulsado()">Insertar Medicion</button>
+
+<p>
+
+<p id="salida1">h</p>
+
+</body>
+</html>
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
