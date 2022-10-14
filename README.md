@@ -28,16 +28,6 @@ En caso de tener dudas acceda a https://docs.github.com/es/repositories/creating
 --------------------------------------------------------------------------------------------------------------------------------------------
   SERVIDOR
 --------------------------------------------------------------------------------------------------------------------------------------------
-![WhatsApp Image 2022-10-14 at 01 56 08](https://user-images.githubusercontent.com/73239280/195735291-84ffc740-7555-4ff2-a0ac-d07986d6943d.jpeg)
 
-LA APP TIENE 5 BOTONES, donde:
-
-- El primer botón busca los beacon disponibles del SparkFun Pro nRF528840.
-
-- El segundo botón busca el beacon determinado. 
-
-- El tercer botón detiene la búsqueda.  
-
-- El cuarto envia los datos para enviarlos al servidor mediante un POST. 
-
-- El último envía unos datos que son SIMULADOS mediante un POST.
+1- Abrir la terminal y acceder la ruta del servidor (\----\servidorREST), una vez que se ha accedido a este, se introduce --> npm run servidor 
+2- Abriendo otra terminal y acceder a la bbdd 
