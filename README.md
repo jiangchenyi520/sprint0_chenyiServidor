@@ -29,5 +29,15 @@ En caso de tener dudas acceda a https://docs.github.com/es/repositories/creating
   SERVIDOR
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-1- Abrir la terminal y acceder la ruta del servidor (\----\servidorREST), una vez que se ha accedido a este, se introduce --> npm run servidor 
-2- Abriendo otra terminal y acceder a la bbdd 
+1- Abrir la terminal y acceder la ruta del servidor (\----\servidorREST), una vez que se ha accedido a este, se introduce --> npm run servidor para arrancar el servidor
+
+![image](https://user-images.githubusercontent.com/73239280/195817293-25c1856f-bfc6-49cd-b720-0aaaa6264002.png)
+
+Para cerrar el servidor--> CTRL + C y responder en la terminal con S para cerrar
+
+![image](https://user-images.githubusercontent.com/73239280/195817679-2f52a086-56af-49cd-bf15-b85eb1874636.png)
+
+
+2- Abriendo la aplicación DB browser (sqlite) y darle a abrir el archivo de datoss.bd, Allí podremos ver todos los datos que se suben. 
+
+![image](https://user-images.githubusercontent.com/73239280/195818964-27c3e757-1e07-4fb3-8e15-6dd0ea556308.png)
