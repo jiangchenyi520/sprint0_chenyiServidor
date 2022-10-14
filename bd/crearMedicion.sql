@@ -1,9 +1,8 @@
-create table Mediciones(
-    id varchar(10) not null,
-    valor varchar(20) not null, 
-    fecha varchar(10) not null,
-    latitud varchar(20) not null, 
-    longitud varchar(20) not null, 
-    primary key(id)
-    
-)
+CREATE TABLE IF NOT EXISTS "Mediciones" (
+        "id"    INTEGER,
+        "valor" varchar(20) NOT NULL,
+        "fecha" varchar(10) NOT NULL,
+        "latitud"       varchar(20) NOT NULL,
+        "longitud"      varchar(20) NOT NULL,
+        PRIMARY KEY("id" AUTOINCREMENT)
+);

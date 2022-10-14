@@ -77,13 +77,13 @@ module.exports = class Logica {
 	} // ()
 	// .................................................................
 
+
+
 	// .................................................................
-	// datos:{dni:Texto, nombre:Texto: apellidos:Texto}
+	// a:{id: text, valor: text, :Texto}
 	// --> insertarPersona() 
 	// .................................................................
 	// ()
-
-
 	insertarMedicion(a){  // se le pasa un objeto con los datos dentro
 		var textoSQL= "insert into Mediciones values($id, $valor, $fecha, $latitud, $longitud)" ;
 		var valoresParaSQL ={
@@ -106,6 +106,20 @@ module.exports = class Logica {
 		})
 	}
 
+
+	borrarConID(id){
+		var textoSQL = "delete from Mediciones where id =$id"
+		var valoresParaSQL = {
+			$id: id, 
+		}
+		return new Promise((resolver, rechazar) =>{
+			(err, res)=> {
+				(err ? rechazar(err) : resolver(res))
+			}
+		})
+		
+	}
+
 	consultarTodasLasMediciones(){
 		var textoSQL = ""
 		var valoresParaSQL = {}
@@ -116,17 +130,6 @@ module.exports = class Logica {
 		})
 	}
 
-	consultarMediciones(medicion){
-		var textoSQL = "select * from Medicion"
-		var valoresParaSQL = {$medicion : medicion}
-		return new Promise((resolver,rechazar) =>{
-			this.laConexion.all(textoSQL,valoresParaSQL,
-				(err,res)=> {
-					(err ? rechazar(err) : resolver(res))
-				}
-			)
-		})
-	}
 
 
 	cerrar() {

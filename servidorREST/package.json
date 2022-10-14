@@ -10,7 +10,7 @@
 		"test": "node ./node_modules/mocha/bin/mocha"
 	},
 	"dependencies": {
-		"cors": "*",
+		"cors": "^2.8.5",
 		"express": "*",
 		"mocha": "8.3.0",
 		"request": "*",

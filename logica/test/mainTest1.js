@@ -1,5 +1,5 @@
 // ........................................................
-// mainTest1.js
+// mainTest.js
 // ........................................................
 const Logica = require("../Logica.js")
 var assert = require("assert")
@@ -28,9 +28,10 @@ describe("Test 1: conectar bbd", function () {
 
 	// ....................................................
 	// ....................................................
-
-	it("puedo insertar una medicion",
+	// se prueba si se puede insertar una medicion, consultandola despues. 
+	it("puedo insertar una medicion",  
 		async function () {
+			var error = null; 
 			try 
 			{
 			await laLogica.insertarMedicion(
@@ -49,6 +50,12 @@ describe("Test 1: conectar bbd", function () {
 				
 	
 	// it
+
+	it("puedo borrar la medicion añadida", async function () {
+		await laLogica.borrarConID(10);   
+	}) 
+
+	
 	// ....................................................
 	// ....................................................
 	// ....................................................

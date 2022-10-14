@@ -236,7 +236,7 @@ function main() {
 	//  
 	var laLogica = null
 
-	laLogica = new Logica("../bd/datoss.bd", function (err) {
+	laLogica = new Logica("../bd/bbdd.bd", function (err) {
 		if (err) {
 			throw new Error("No he podido conectar con datos.db")
 		}
